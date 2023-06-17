@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_weather_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:configChanges="orientation"
+        android:focusable="true"
+        android:gravity="center"
+        app:autoSizeTextType="uniform"
+        tools:context=".pages.Weather.WeatherFragment">
+
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="@string/loading_text"
+            android:textSize="48sp"
+            android:textStyle="bold"
+
+            tools:text="Address" />
+
+        <TextView
+            android:id="@+id/tv_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_corners_grey"
+            android:textSize="24sp"
+            android:textStyle="italic|bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weather_detail_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_condition"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="16dp"
+            android:outlineAmbientShadowColor="@color/purple_200"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                app:autoSizeTextType="uniform">
+
+
+                <RelativeLayout
+                    android:id="@+id/weather_loader_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/weather_loader"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="20dp"
+                        android:minWidth="80dp" />
+
+                    <TextView
+                        android:id="@+id/tv_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/rounded_corners_grey"
+                        android:gravity="center"
+                        android:textSize="48sp"
+                        android:textStyle="bold"
+                        app:autoSizeTextType="uniform" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/weather_loader_layout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:textStyle="italic">
+
+                    <TextView
+                        android:id="@+id/updated_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="8dp"
+                        android:text="@string/updated_time_header"
+                        android:textSize="16sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/updated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading_text"
+                        android:textSize="16sp"
+                        tools:text="An example time" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

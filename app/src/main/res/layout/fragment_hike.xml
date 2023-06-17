@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".pages.HikeFragment">
+
+    <ProgressBar
+        android:id="@+id/hiking_loader"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_corners"
+        android:gravity="center"
+        android:text="Nearby"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+</RelativeLayout>

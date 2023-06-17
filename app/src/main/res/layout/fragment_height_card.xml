@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_height_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intake.UserCreationCards.HeightCardFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/name_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:elevation="8dp"
+        android:outlineAmbientShadowColor="@color/purple_200">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/height_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:text="@string/height_header"
+                tools:ignore="RtlSymmetry" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/height_TV"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/heightFeet_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="@string/feet_header" />
+
+                <TextView
+                    android:id="@+id/heightInches_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/height_picker_inches"
+                    android:layout_marginStart="16dp"
+
+                    android:layout_toEndOf="@id/height_picker_feet"
+                    android:text="@string/inches_header" />
+
+                <NumberPicker
+                    android:id="@+id/height_picker_feet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heightFeet_TV"
+                    android:layout_margin="8dp" />
+
+                <NumberPicker
+                    android:id="@+id/height_picker_inches"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heightFeet_TV"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/height_picker_feet" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

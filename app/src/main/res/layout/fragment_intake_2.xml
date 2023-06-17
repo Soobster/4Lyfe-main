@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:padding="16dp"
+    android:paddingTop="24dp">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/height_card"
+        android:name="com.cs4530.a4lyfe.Intake.UserCreationCards.HeightCardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/fragment_height_card" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/weight_card"
+        android:name="com.cs4530.a4lyfe.Intake.UserCreationCards.WeightCardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/height_card"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/fragment_weight_card" />
+
+</RelativeLayout>

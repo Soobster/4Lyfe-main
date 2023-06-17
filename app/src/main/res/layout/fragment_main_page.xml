@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/welcome_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        card_view:cardElevation="10dp">
+
+        <TextView
+            android:id="@+id/user_welcome_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:autoSizeTextType="uniform"
+            android:padding="10dp"
+            android:textFontWeight="800"
+            android:textSize="30sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/button_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome_card"
+        android:layout_margin="12dp"
+        app:alignContent="stretch"
+        app:alignItems="baseline"
+        app:flexWrap="wrap"
+        tools:context=".MainPage">
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/weather_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/hike_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bmi_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</RelativeLayout>
+
